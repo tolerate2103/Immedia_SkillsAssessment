@@ -1,0 +1,99 @@
+<h1></h1>
+<p>API Image</p>
+
+<div class="row">
+  <div class="col-12 pl-xl-1 pr-xl-1 pb-xl-1">
+    <div class="rbox">
+      <div class="rbox-content">
+        <div class="row">
+          <div class="col-10">
+            <div class="action-bar">
+              <div class="action-bar">
+              </div>
+            </div>
+          </div>
+          <div class="col-2">
+            <div class="input-group">
+              <input type="search" class="form-control form-control-sm" [(ngModel)]="Criteria.Search" (keyup.enter)="LoadLocation();" placeholder="Search..." />
+              <div class="input-group-append">
+                <button class="btn btn-primary btn-sm" type="button" data-toggle="tooltip" title="Search">
+                  <i class="fa fa-search">Search</i>
+                </button>
+                <button class="btn btn-reset btn-sm" type="button" data-toggle="tooltip" title="Clear search results">
+                  <i class="fa fa-times"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="col-12">
+  <div class="row">
+    <div class="col-xl-6 pl-xl-1 pr-xl-1">
+      <div class="rbox">
+        <div class="rbox-content">
+          <div class="row">
+            <div class="col-12">
+
+              <div class="table-responsive">
+                <div class="rbox-content-height-2">
+                  <table class="rs-list-table">
+                    <thead>
+                      <tr class="flex-grow-1">
+                        <th>Image Id</th>
+                        <th>Image Name</th>
+                        <th>Location</th>
+                        <th>Create Date</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr *ngFor="let item of ImageDetails">
+                        <td>
+                          <a href="#" onclick="return false;" (click)="loadImageDetail(item.ImageId)"> View Image </a>
+                        </td>
+                        <td>
+                          {{item.ImageName}}
+                        </td>
+                        <td>
+                          {{item.Location}}
+                        </td>
+                        <td>
+                          {{item.CreatedDate | date:'MMM dd yyyy'}}
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-xl-6 pl-xl-1 pr-xl-1">
+      <div class="rbox">
+        <div class="rbox-content">
+          <div class="row">
+            <div class="col-12">
+              <div class="table-responsive">
+                <div class="rbox-content-height-2">
+
+                  <div class="container">
+                    <img class="image" src="{{model?.ImageDetailItem.ImageName}}" style="width:200px; height:200px">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+

@@ -1,0 +1,54 @@
+@import "_utilities.scss";
+
+.list-table {
+  font-family: $font-family;
+  font-size: $font-size;
+}
+
+.rs-list-table {
+  width: 100%;
+}
+
+
+.rs-list-table-sm {
+  font-size: 11px;
+}
+
+.rs-list-table th {
+  padding: 3px;
+  height: 30px;
+  font-weight: normal;
+  font-size: 13px;
+}
+
+.rs-list-table tbody tr:hover {
+  background-color: #f5f5f5;
+}
+
+.rs-list-table tbody tr {
+  border-bottom: 1px solid #f2f2f2;
+}
+
+.rs-list-table-active {
+  background-color: rgba(51, 122, 183, 0.34);
+  color: #fff !important;
+}
+
+.rs-list-table thead {
+  background-color: $table-list-th-bgcolor;
+  color: $off-white !important;
+}
+
+.rs-list-table thead a:link, .rs-list-table thead a:visited {
+  color: #f7f7f7 !important;
+}
+
+.rs-list-table-filter {
+  background-color: #f5f5f5;
+  border-bottom: 1px solid #dddddd;
+}
+
+
+
+
+
